@@ -1,0 +1,28 @@
+{
+  "name": "vef1-2026-h1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "sass --watch sass/styles.scss css/style.css",
+    "lint": "stylelint \"sass/**/*.scss\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/elisabetjons/vef1-2026-h1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/elisabetjons/vef1-2026-h1/issues"
+  },
+  "homepage": "https://github.com/elisabetjons/vef1-2026-h1#readme",
+  "devDependencies": {
+    "sass": "^1.105.1",
+    "stylelint": "^17.16.0",
+    "stylelint-config-sass-guidelines": "^13.0.0",
+    "stylelint-config-standard": "^40.0.0"
+  }
+}
