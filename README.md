@@ -57,3 +57,5 @@ vef1-2026-h1/
 
 ## Hýsing á vef
 Vefurinn er aðgengilegur á Netlify. 
+
+Slóð: [https://vefforritun-hopverkefni-1.netlify.app/]
