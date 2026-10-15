@@ -32,7 +32,7 @@ npm run lint
 ```
 
 ## Uppbygging verkefnis
-
+```text
 vef1-2026-h1/
 ├── index.html
 ├── teymi.html
@@ -47,6 +47,7 @@ vef1-2026-h1/
 ├── .gitignore
 ├── .stylelintrc.json
 └── README.md
+```
 
 ## Hópmeðlimir
 | Nafn | HÍ-notandanafn | GitHub-notandanafn |
