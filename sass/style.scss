@@ -1,0 +1,1618 @@
+// ==========================================
+// 1. LETUR MIXINS (Leturstílar úr Figma)
+// ==========================================
+
+@mixin text-md-regular {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@mixin text-md-medium {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@mixin text-md-semibold {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0;
+}
+
+@mixin text-sm-regular {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@mixin text-sm-medium {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@mixin text-sm-semibold {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
+@mixin text-lg-regular {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+@mixin text-lg-semibold {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+@mixin text-xl-regular {
+  font-family: Inter, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@mixin text-xl-medium {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@mixin text-xl-semibold {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0;
+}
+
+@mixin display-sm-semibold {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  line-height: 38px;
+  letter-spacing: 0;
+  text-align: center;
+}
+
+@mixin display-md-semibold {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+@mixin display-lg-semibold {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+@mixin display-lg-medium {
+  font-family: Inter, sans-serif;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 60px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+@mixin display-xl-semibold {
+  font-family: Inter, sans-serif;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 72px;
+  letter-spacing: -0.02em;
+  text-align: center;
+}
+
+// ==========================================
+// 2. LITI- OG GRUNNBREYTUR
+// ==========================================
+$primary: #7f56d9;
+$primary-link: #6941c6;
+$text-main: #171717;
+$text-label: #404040;
+$text-muted: #525252;
+$text-placeholder: #737373;
+$badge-text: #6931c6;
+$bg-white: #fff;
+$bg-light: #fafafa;
+$border-light: #f5f5f5;
+$border-input: #d0d5dd;
+
+// ==========================================
+// 3. GRUNNSTILLINGAR 
+// ==========================================
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  min-width: 320px;
+}
+
+body {
+  font-family: Inter, sans-serif;
+  color: $text-main;
+  background-color: $bg-white;
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin-inline: auto;
+  padding-inline: 32px;
+}
+
+a {
+  color: inherit;
+}
+
+
+// ==========================================
+// 4. HAUS 
+// ==========================================
+
+.header {
+  width: 100%;
+  background-color: $bg-white;
+  border-bottom: 1px solid $border-light;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+    gap: 32px;
+  }
+
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    text-decoration: none;
+  }
+
+  .logo-img {
+    display: block;
+    width: auto;
+    height: 32px;
+    max-width: 180px;
+    object-fit: contain;
+  }
+
+  .menu-button {
+    display: none;
+  }
+
+  .menu-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
+    gap: 32px;
+  }
+
+  .nav {
+    ul {
+      display: flex;
+      align-items: center;
+      list-style: none;
+      gap: 32px;
+    }
+
+    a,
+    .menu-text {
+      @include text-sm-medium;
+
+      color: $text-muted;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    a:hover {
+      color: $text-main;
+    }
+  }
+
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-shrink: 0;
+  }
+
+  .login-link {
+    @include text-sm-semibold;
+
+    color: $text-muted;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid $primary;
+    border-radius: 8px;
+    background-color: $primary;
+    color: $bg-white;
+
+    @include text-sm-semibold;
+
+    text-decoration: none;
+    white-space: nowrap;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
+// ==========================================
+// 5. INNSKRÁNINGARSÍÐA 
+// ==========================================
+
+.auth-main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: calc(100vh - 72px);
+  min-height: calc(100dvh - 72px);
+  padding: 48px 24px;
+}
+
+.auth-card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 360px;
+  gap: 32px;
+  margin-inline: auto;
+
+  // Logo and titill 
+
+  .auth-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+    text-align: center;
+
+    .logomark-large {
+      display: block;
+      width: 48px;
+      height: 48px;
+      margin-bottom: 8px;
+      object-fit: contain;
+    }
+
+    h2 {
+      @include display-sm-semibold;
+
+      color: $text-main;
+    }
+
+    p {
+      @include text-md-regular;
+
+      color: $text-muted;
+      text-align: center;
+    }
+  }
+
+  // Layout á innskráningarkassa 
+
+  .auth-form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 24px;
+  }
+
+  // Netfang and lykilorð 
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+
+    label {
+      @include text-sm-medium;
+
+      color: $text-label;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      min-width: 0;
+      height: 44px;
+      padding: 0 14px;
+      border: 1px solid $border-input;
+      border-radius: 8px;
+      background-color: $bg-white;
+      color: $text-main;
+
+      @include text-md-regular;
+
+      outline: none;
+
+      &::placeholder {
+        color: $text-placeholder;
+      }
+
+      &:focus {
+        border-color: $primary;
+      }
+    }
+  }
+
+  // Gleymt lykilorð ofl 
+
+  .form-options {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+    width: 100%;
+
+    .checkbox-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+
+      @include text-sm-regular;
+
+      color: $text-label;
+      cursor: pointer;
+
+      input[type='checkbox'] {
+        width: 16px;
+        height: 16px;
+        flex-shrink: 0;
+        accent-color: $primary;
+        cursor: pointer;
+      }
+    }
+
+    .forgot-password {
+      @include text-sm-semibold;
+
+      color: $primary-link;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  // Login og Google takki 
+
+  .btn-full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid $primary;
+    border-radius: 8px;
+    background-color: $primary;
+    color: $bg-white;
+
+    @include text-md-semibold;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .btn-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    min-height: 44px;
+    padding: 10px 16px;
+    border: 1px solid $border-input;
+    border-radius: 8px;
+    background-color: $bg-white;
+    color: $text-main;
+
+    @include text-md-semibold;
+
+    &:hover {
+      background-color: $bg-light;
+    }
+
+    .google-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      font-weight: 600;
+    }
+  }
+
+  // Texti neðst 
+
+  .auth-footer-text {
+    @include text-sm-regular;
+
+    color: $text-muted;
+    text-align: center;
+
+    a {
+      @include text-sm-semibold;
+
+      color: $primary-link;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+/* ==========================================
+   6. Fyrir mobile
+   ========================================== */
+
+@media (width <= 600px) {
+  .container {
+    padding-inline: 16px;
+  }
+
+  .header {
+    .content {
+      min-height: 64px;
+      gap: 12px;
+    }
+
+    .logo-img {
+      height: 28px;
+      max-width: 140px;
+    }
+
+  }
+
+  .auth-main {
+    min-height: calc(100vh - 64px);
+    min-height: calc(100dvh - 64px);
+    padding: 32px 16px;
+  }
+
+  .auth-card {
+    max-width: 100%;
+    gap: 24px;
+
+    .auth-header {
+      gap: 10px;
+
+      .logomark-large {
+        width: 40px;
+        height: 40px;
+        margin-bottom: 4px;
+      }
+
+      h2 {
+        font-size: 26px;
+        line-height: 34px;
+      }
+
+      p {
+        font-size: 14px;
+        line-height: 22px;
+      }
+    }
+
+    .auth-form {
+      gap: 20px;
+    }
+
+    .form-group input {
+      width: 100%;
+      font-size: 16px;
+    }
+
+    .form-options {
+      align-items: flex-start;
+      gap: 12px;
+
+      .checkbox-label {
+        max-width: 100%;
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      .forgot-password {
+        font-size: 12px;
+        line-height: 18px;
+      }
+    }
+
+    .btn-full,
+    .btn-google {
+      width: 100%;
+      min-height: 44px;
+    }
+
+    .auth-footer-text {
+      font-size: 13px;
+      line-height: 20px;
+    }
+  }
+}
+
+// ==========================================
+// 7. TEYMISSÍÐA 
+// ==========================================
+
+.team-main {
+  width: 100%;
+
+  .container {
+    width: 100%;
+  }
+
+  // hero og ráðningar kassi 
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    align-self: center;
+    width: fit-content;
+    padding: 4px 12px;
+    border: 1px solid #e9d7fe;
+    border-radius: 16px;
+    background: #f9f5ff;
+    color: $badge-text;
+
+    @include text-sm-regular;
+  }
+
+  .team-hero {
+    padding: 64px 0 48px;
+    text-align: center;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    h1 {
+      max-width: 800px;
+
+      @include display-lg-semibold;
+
+      color: $text-main;
+    }
+
+    p {
+      max-width: 700px;
+
+      @include text-xl-regular;
+
+      color: $text-muted;
+    }
+  }
+
+  // Teymið 
+  .team-grid-section {
+    padding: 48px 0 80px;
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .team-member {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      min-width: 0;
+      gap: 12px;
+
+      > img {
+        display: block;
+        width: 100%;
+        aspect-ratio: 280 / 296;
+        object-fit: cover;
+      }
+
+      h3 {
+        @include text-xl-semibold;
+
+        color: $text-main;
+      }
+
+      .role {
+        @include text-lg-regular;
+
+        color: $primary;
+      }
+
+      p {
+        @include text-md-regular;
+
+        color: $text-muted;
+      }
+
+      .social-links {
+        display: flex;
+        gap: 16px;
+        margin-top: 4px;
+
+        a {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          color: $text-muted;
+          text-decoration: none;
+
+          @include text-sm-regular;
+
+          img {
+            display: block;
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+          }
+
+          &:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+
+  // Ráðningar og mynd 
+  .hiring-section {
+    padding: 64px 0;
+    text-align: center;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+
+    h2 {
+      max-width: 800px;
+
+      @include display-md-semibold;
+
+      color: $text-main;
+    }
+
+    p {
+      max-width: 700px;
+
+      @include text-xl-regular;
+
+      color: $text-muted;
+    }
+
+    .office-image {
+      width: 100%;
+      margin-top: 24px;
+
+      img {
+        display: block;
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+        border-radius: 16px;
+      }
+    }
+  }
+
+  // Störf í boði 
+  .job-listings-section {
+    padding: 32px 0 80px;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+      max-width: 832px;
+    }
+
+    > .container > h3 {
+      @include text-xl-semibold;
+
+      color: $text-main;
+    }
+
+    .job-card {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      width: 100%;
+      padding: 24px;
+      border: 1px solid #e5e5e5;
+      border-radius: 16px;
+      background: $bg-white;
+    }
+
+    .job-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+      min-width: 0;
+
+      h4 {
+        @include text-lg-semibold;
+
+        color: $text-main;
+      }
+
+      p {
+        @include text-md-regular;
+
+        color: $text-muted;
+      }
+    }
+
+    .job-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+      padding: 4px 12px;
+      color: $text-label;
+
+      @include text-md-medium();
+
+      .clock-icon {
+        display: block;
+        width: 20px;
+        height: 20px;
+        object-fit: contain;
+        flex-shrink: 0;
+      }
+    }
+  }
+
+  // Póstur 
+  .newsletter-section {
+    padding: 80px 0;
+    background: $bg-light;
+    text-align: center;
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    h2 {
+      max-width: 768px;
+
+      @include display-md-semibold;
+
+      color: $text-main;
+    }
+
+    p {
+      @include text-xl-regular;
+
+      color: $text-muted;
+    }
+
+    .newsletter-form {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      width: 100%;
+      max-width: 484px;
+      margin-top: 16px;
+
+      input[type='email'] {
+        width: 360px;
+        flex: 1;
+        min-width: 0;
+        height: 48px;
+        padding: 0 14px;
+        border: 1px solid $border-input;
+        border-radius: 8px;
+        background: $bg-white;
+        color: $text-main;
+
+        @include text-md-regular;
+
+        &::placeholder {
+          color: $text-placeholder;
+        }
+
+        &:focus {
+          outline: 2px solid $primary;
+          outline-offset: 1px;
+        }
+      }
+
+      .btn-primary {
+        width: 108px;
+        min-height: 48px;
+        padding: 12px 20px;
+        border: 1px solid $primary;
+        border-radius: 8px;
+        background: $primary;
+        color: $bg-white;
+
+        @include text-md-semibold;
+
+        cursor: pointer;
+        white-space: nowrap;
+      }
+    }
+
+    .privacy-link {
+      display: block;
+      width: 360px;
+      max-width: 100%;
+      height: 20px;
+      margin-top: 4px;
+      align-self: center;
+      text-align: left;
+      color: $text-muted;
+
+      @include text-sm-regular;
+
+      text-decoration: underline;
+    }
+  }
+}
+
+// ==========================================
+// 8. FÓTUR 
+// ==========================================
+
+.footer {
+  padding: 64px 0 32px;
+  background: $bg-white;
+
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 48px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-bottom: 48px;
+  }
+
+  .footer-col {
+    h4 {
+      margin-bottom: 16px;
+
+      @include text-sm-semibold;
+
+      color: $text-placeholder;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      list-style: none;
+    }
+
+    a {
+      color: $text-muted;
+
+      @include text-md-semibold();
+
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+      }
+    }
+  }
+
+  .footer-divider {
+    height: 1px;
+    border: 0;
+    background: #e5e5e5;
+  }
+
+  .footer-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding-top: 32px;
+  }
+
+  .logo-wrap {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .copyright {
+    color: $text-muted;
+
+    @include text-sm-regular;
+  }
+}
+
+
+
+/* ==========================================
+   Fyrir Mobile
+========================================== */
+
+@media (width <= 600px) {
+  .team-main {
+    .team-hero {
+      padding-top: 32px;
+
+      h1 {
+        font-size: 28px;
+        line-height: 36px;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 23px;
+      }
+    }
+
+    .team-grid {
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .team-member {
+      width: 100%;
+    }
+
+    .team-member > img { 
+      width: 100%;
+      max-height: 320px;
+      object-fit: cover;
+    }
+
+    .hiring-section .office-image img {
+      height: 200px;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    .job-listings-section .job-card {
+      padding: 16px;
+    }
+  }
+
+  .footer .copyright {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}
+
+
+// ==========================================
+// 6. FORSÍÐA 
+// ==========================================
+
+// Hero hluti
+
+.hero {
+  order: 1;
+  width: 100%;
+  min-height: 892px;
+  padding: 96px 32px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+  text-align: center;
+  overflow: hidden;
+
+  .hero-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  h1 {
+    @include display-xl-semibold;
+
+    max-width: 900px;
+    margin: 0;
+  }
+
+  > p,
+  .hero-content > p {
+    @include text-xl-regular;
+
+    max-width: 650px;
+    color: $text-muted;
+    margin: 0;
+  }
+
+  .hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 20px;
+    border: 1px solid $primary;
+    border-radius: 8px;
+    background: $primary;
+    color: $bg-white;
+
+    @include text-md-semibold;
+
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.2s ease;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  // Tölva 
+
+  .hero-image {
+    position: relative;
+    width: 100%;
+    max-width: 984px;
+    margin-inline: auto;
+  }
+
+  .laptop-mockup {
+    position: relative;
+    width: 100%;
+    display: block;
+  }
+
+  .laptop-frame {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .dashboard-screen {
+    position: absolute;
+    top: 15%;
+    left: 13.2%;
+    width: 73.6%;
+    height: 82%;
+    object-fit: cover;
+    border-radius: 2px; 
+  }
+}
+
+// Features
+
+.features {
+  order: 2;
+  width: 100%;
+  max-width: 1280px;
+  min-height: 420px;
+  margin-inline: auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+  background: $bg-white;
+
+  > .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px 10px;
+    color: $badge-text;
+
+    @include text-md-semibold();
+  }
+
+  > h2 {
+    @include display-md-semibold;
+
+    max-width: 900px;
+    margin: 0;
+  }
+
+  > p {
+    @include text-xl-regular;
+
+    max-width: 650px;
+    margin: 0;
+    color: $text-muted;
+  }
+
+  .feature-grid {
+    width: 100%;
+    max-width: 1216px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 32px;
+    margin-inline: auto;
+  }
+
+  .feature-item {
+    width: 100%;
+    min-width: 0;
+    min-height: 178px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      flex: 0 0 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: #f9f5ff;
+
+      img {
+        display: block;
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+    }
+
+    h3 {
+      @include text-xl-medium;
+
+      color: $text-main;
+      margin: 0;
+    }
+
+    p {
+      @include text-md-regular;
+
+      color: $text-muted;
+      margin: 0;
+    }
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: $primary-link;
+
+      @include text-md-regular;
+
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+
+// Meðmæli
+
+.testimonial {
+  order: 3;
+  width: 100%;
+  min-height: 360px;
+  padding: 48px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  background: #fafafa;
+  text-align: center;
+
+  > img:first-child {
+    display: block;
+    width: auto;
+    max-width: 160px;
+    height: 32px;
+    object-fit: contain;
+  }
+
+  blockquote {
+    @include display-lg-medium;
+
+    width: 100%;
+    max-width: 1280px;
+    margin: 0;
+  }
+
+  .avatar {
+    width: 64px;
+    height: 64px;
+    flex: 0 0 48px;
+    margin: 0;
+    border-radius: 50%;
+    background-color: #a2a8cd;
+    object-fit: cover;
+  }
+
+  cite {
+    display: block;
+    margin-top: -20px;
+    color: $text-muted;
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    font-style: normal;
+  }
+}
+
+// Features
+
+.features-section {
+  padding-top: 96px;
+  padding-bottom: 96px;
+  background-color: $bg-white;
+  text-align: center;
+
+  .features-container {
+    max-width: 1280px;
+    margin-inline: auto;
+    padding-inline: 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 155px;
+    height: 28px;
+    padding: 4px 12px;
+    border-radius: 16px;
+    background-color: #f9f5ff;
+    color: #6941c6;
+
+    @include text-sm-medium;
+
+    margin-bottom: 12px;
+  }
+
+  h2 {
+    @include display-md-semibold;
+
+    color: $text-main;
+    margin-bottom: 20px;
+    max-width: 768px;
+  }
+
+  p.subtitle {
+    @include text-xl-regular;
+
+    color: $text-muted;
+    margin-bottom: 64px;
+    max-width: 768px;
+  }
+
+  // Tölva + sími
+  .images-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 768px;
+    height: 561px;
+    margin: 0 auto 96px;
+
+    .desktop-img {
+      width: 768px;
+      height: 512px;
+      object-fit: cover;
+      border-radius: 10px;
+      border: 4px solid #171717;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .phone-img {
+      width: 244px;
+      height: 497px;
+      object-fit: cover;
+      border-radius: 24px;
+      position: absolute;
+      top: 64px;
+      left: -120px;
+      z-index: 2;
+      box-shadow: 0 20px 24px -4px rgb(16 24 40 / 10%);
+    }
+  }
+
+  // 3 dálkar neðst
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    width: 100%;
+    text-align: center;
+
+    .feature-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+
+      .icon-wrapper {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background-color: #f9f5ff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+
+        img {
+          width: 24px;
+          height: 24px;
+          object-fit: contain;
+        }
+      }
+
+      h3 {
+        @include text-xl-semibold;
+
+        color: $text-main;
+        margin-bottom: 8px;
+      }
+
+      p {
+        @include text-md-regular;
+
+        color: $text-muted;
+        margin-bottom: 20px;
+      }
+
+      .learn-more {
+        @include text-md-semibold;
+
+        color: #6941c6;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
+// cta neðst
+
+.cta {
+  order: 4;
+  width: 100%;
+  padding: 64px 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background: $bg-light;
+
+  h2 {
+    @include display-sm-semibold;
+
+    margin: 0 0 12px;
+  }
+
+  > p {
+    @include text-md-regular;
+
+    color: $text-muted;
+    margin: 0 0 28px;
+  }
+
+  .cta-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+
+    @include text-sm-semibold;
+
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background-color 0.2s ease;
+  }
+
+  .btn-primary {
+    background: $primary;
+    border-color: $primary;
+    color: $bg-white;
+
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+
+  .btn-secondary {
+    background: $bg-white;
+    border-color: $border-input;
+    color: $text-label;
+
+    &:hover {
+      background: $bg-light;
+    }
+  }
+}
+
+/* ==========================================
+   Fyrir mobile
+========================================== */
+
+@media (width <= 600px) {
+  .hero {
+    padding-inline: 24px;
+
+    h1 {
+      font-size: 28px;
+      line-height: 36px;
+    }
+
+    .hero-image {
+      height: 160px;
+    }
+  }
+
+  .features {
+    padding-inline: 24px;
+    min-height: auto;
+
+    .feature-grid {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+
+    .feature-item {
+      min-height: auto;
+    }
+  }
+
+  .testimonial {
+    padding-inline: 24px;
+
+    blockquote {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+
+  .cta {
+    padding-inline: 24px;
+  }
+
+  .features-section {
+    padding-inline: 24px;
+
+    .feature-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .images-wrapper {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 3;
+
+      .desktop-img {
+        width: 100%;
+        height: auto;
+      }
+
+      .phone-img {
+        width: 30%;
+        height: auto;
+        left: -4%;
+        top: 20%;
+      }
+    }
+  }
+}

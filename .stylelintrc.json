@@ -1,6 +1,12 @@
 {
-    "extends": [
-        "stylelint-config-standard", 
-        "stylelint-config-sass-guidelines"
-    ]
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-sass-guidelines"
+  ],
+  "rules": {
+    "max-nesting-depth": 5,
+    "declaration-property-value-no-unknown": null,
+    "selector-no-qualifying-type": null,
+    "no-descending-specificity": null
+  }
 }

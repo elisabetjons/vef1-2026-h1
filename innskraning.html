@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="is">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forritið - Innskráning</title>
+    <link rel="stylesheet" href="sass/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <div class="content">
+
+                <!-- Logo og titill -->
+                <a href="index.html" class="logo-wrap">
+                    <img
+                        src="img/Logo.svg"
+                        alt="Forritið"
+                        class="logo-img"
+                    >
+                </a>
+
+                <!-- Hamburger takki fyrir síma -->
+                <button class="menu-button" aria-label="Opna valmynd">☰</button>
+
+                <!-- Valmyndarbox -->
+                <div class="menu-box">
+                    
+                    <!-- Valmyndarhlekkir -->
+                    <nav class="nav">
+                        <ul>
+                            <li><a href="index.html">Forsíða</a></li>
+                            <li><a href="teymi.html">Teymið</a></li>
+                            <li><span class="menu-text">Forritið</span></li>
+                        </ul>
+                    </nav>
+
+                    <!-- Aðgerðir / Innskráning -->
+                    <div class="header-actions">
+                        <a href="innskraning.html" class="login-link">Innskráning</a>
+                        <a href="innskraning.html" class="btn-primary">Skráðu þig</a>
+                    </div>
+
+                </div> 
+
+            </div>
+        </div>
+    </header>
+
+
+    <main class="auth-main">
+        <div class="auth-card">
+            
+            <!-- Lógó og fyrirsögn -->
+            <div class="auth-header">
+                <img
+                    src="img/LogoLg.svg"
+                    alt=""
+                    class="logomark-large"
+                    >
+                <h2>Skráðu þig inn</h2>
+                <p>Velkomin aftur í Forritið.</p>
+            </div>
+
+            <!-- Netfang og lykilorð -->
+            <form class="auth-form" onsubmit="return false;">
+                <div class="form-group">
+                    <label for="email">Netfang</label>
+                    <input type="email" id="email" placeholder="Skráðu netfangið þitt">
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Lykilorð</label>
+                    <input type="password" id="password" placeholder="••••••••">
+                </div>
+
+                <!-- Valmöguleikar undir reitum -->
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox"> Mundu eftir mér í 30 daga
+                    </label>
+                    <a href="#" class="forgot-password">Gleymt lykilorð</a>
+                </div>
+
+                <!-- Takkar -->
+                <button type="submit" class="btn-primary btn-full">Innskráning</button>
+                <button type="button" class="btn-google">
+                    <img src="img/Google.svg" alt="" class="google-icon">
+                    Innskráning með Google
+                </button>
+            </form>
+
+            <!-- Texti neðst -->
+            <div class="auth-footer-text">
+                <p>Ekki með aðgang? <a href="#">Skráðu þig</a></p>
+            </div>
+
+        </div>
+    </main>
+
+</body>
+</html>
